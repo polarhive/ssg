@@ -2,12 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload stylesheet" href="style.css" as="style">
     <title>{{.Title}}</title>
 </head>
 <body>
-    <h1>{{.Title}}</h1>
-    <div>
+    <header>
+        <h1>{{.Title}}</h1>
+    </header>
+
+    <main>
         {{.Content}}
-    </div>
+    </main>
+
+    <footer>
+    </footer>
 </body>
 </html>

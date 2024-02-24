@@ -1,21 +1,50 @@
-body {
-    font-family: sans-serif;
+body, h1, h2, p, blockquote {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; 
-    }
-}
-
-html {
-    font-size: 16px;
 }
 
 body {
-    font-size: 1rem;
+    font-family: sans-serif;
+    line-height: 1.6;
 }
 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 0;
+    padding: 0.5em 10px;
+}
