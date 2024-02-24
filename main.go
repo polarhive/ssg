@@ -54,10 +54,16 @@ func copyDir(src, dst string) error {
 }
 
 func main() {
+	helpFlag := flag.Bool("help", false, "show help message")
 	serveFlag := flag.Bool("serve", false, "only run ssg serve after copying files")
+
 	flag.Parse()
 
-	// copy files from static/* to rendered/* (for now)
+	if *helpFlag {
+		flag.Usage()
+		os.Exit(0)
+	}
+
 	srcDir := "static"
 	dstDir := "rendered"
 
@@ -107,7 +113,7 @@ func main() {
 	// serve the rendered/* dir
 	if *serveFlag {
 		http.Handle("/", http.FileServer(http.Dir("rendered")))
-		fmt.Println("Server started at http://localhost:8080")
+		fmt.Println("check: http://localhost:8080")
 		if err := http.ListenAndServe(":8080", nil); err != nil {
 			fmt.Println("Error starting server:", err)
 			os.Exit(1)
